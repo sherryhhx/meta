@@ -1,0 +1,25 @@
+1.让浏览器默认以什么版本来显示：
+　　　　<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+　　　　content里的IE=edge表示让浏览器默认以edge内核去处理页面，而后面的chrome=1则是在用户安装了GCF之后可以在IE浏览器里以chrome内核来处理，如果换成其它内核只需要改变IE=后面的值即可。（IE9没有此选项，兼容IE8+）
+　　2.360使用极速模式打开：
+　　　　<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+　　　　<meta name="renderer" content="webkit"/>
+　　3.禁止使用本地缓存：
+　　　　<meta http-equiv="pragma" content="no-cache" />
+　　4.定时让网页跳转到指定网页上：
+　　　　之前做跳转经常用的是location，但是发现很多手机浏览器不支持或者根本不支持JS，后来发现这个标签感觉还是挺实用的。
+　　　　<meta http-equiv="refresh" content="2; url='...'" />
+　　　　其中content后的第一个参数为多少S之后跳转，第二个参数为跳转地址，不加第二个参数为本页面刷新。
+　　　　那如果想第一条设置一个时间跳到自定义协议头地址，如果无效第二条间隔一会跳到另一个无限制访问的地址可以么？答案是否定的。（兼容IE7+）
+　　5.搜索引擎相关：
+　　　　告诉搜索引擎这个网页的关键字
+　　　　<meta name="keywords" content="key1,key2..." />
+　　　　告诉搜索引擎网站的主要内容
+　　　　<meta name="description" content="冰姐姐的博客" />
+　　6.移动开发：
+　　　　使当前viewport的宽度等于设备的宽度，同时不允许缩放
+　　　　<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+　　　　禁止识别成emile或者phone号码
+　　　　<meta name="format-detection" content="telephone=no"/>
+　　　　<meta name="format-detection" content="email=no"/>
+																转载自博客园
